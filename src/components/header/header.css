@@ -1,0 +1,28 @@
+ul.navigation {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width:100%;
+    margin:auto;
+    background-color: #0071DC;
+  }
+
+  .navigation > li {
+      padding:20px;
+      color: white;
+  }
+
+  .navigation > li:first-child {
+      padding-left: 80px;
+      background-image: url(https://play-lh.googleusercontent.com/nckECUuaqv8rJllZ3CIvOJxxBnqe0TISPy_X-9B3U8nM4rst1Nr0eixKZlXW5fKyiTsf);
+      background-size: 65px;
+    margin-left:30px;
+      background-repeat: no-repeat;
+  }
+  
+  .navigation > li > a {
+      color: white;
+      text-decoration: none;
+  }

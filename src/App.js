@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Home, LayoutTwo } from "./components";
+import { ErrorBoundary } from "react-error-boundary";
+
+import "./App.css";
+
+const ErrorFallback = ({ error, resetErrorBoundary }) => {
+  return (
+    <div role="alert" className="alert">
+      <h1>Whoops!</h1>
+      <pre>{error.message}</pre>
+    </div>
+  );
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <BrowserRouter forceRefresh="true">
+        <Switch>
+          <Route exact={true} path={"/"}>
+            <ErrorBoundary FallbackComponent={ErrorFallback}>
+              <Home />
+            </ErrorBoundary>
+          </Route>
+          <Route exact={true} path={"/layout-two"}>
+            <ErrorBoundary FallbackComponent={ErrorFallback}>
+              <LayoutTwo />
+            </ErrorBoundary>
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    </React.Fragment>
   );
 }
 

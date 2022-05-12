@@ -1,0 +1,36 @@
+.flex-container-layout {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.flex-container-layout > .flex-layout {
+  display: flex;
+  flex-direction: row;
+}
+
+.teaser {
+  margin: 5px;
+  align-items: center;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px rgb(226, 222, 222);
+
+  border-radius: 5px;
+  
+}
+.teaser > .hero-right > img {
+  object-fit: contain;
+  width: 100%;
+  margin: auto;
+}
+
+.teaser > .hero-left {
+  padding: 10px;
+}
+.flex-layout > .teaser {
+  width: 30%;
+  display: flex;
+  flex-direction: column-reverse;
+}

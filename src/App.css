@@ -1,7 +1,14 @@
+@import url('https://i5.walmartimages.com/dfw/63fd9f59-a78c/fcfae9b6-2f69-4f89-beed-f0eeb4237946/v1/BogleWeb_subset-Regular.woff2');
+
 .App {
   text-align: center;
 }
 
+body {
+  font-family:Bogle,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size:100%;
+  line-height:25px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

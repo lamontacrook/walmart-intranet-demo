@@ -1,0 +1,41 @@
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.flex-container > .two-column {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid black;
+}
+
+.flex-container > .one-column {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+}
+
+.one-column > .hero-left {
+    width: 100%;
+}
+
+.one-column > .hero-right {
+    display: none;
+}
+
+.two-column > .hero-left {
+    width: 65%;
+    padding-left: 20px;
+}
+
+.two-column > .hero-right {
+    width: 35%;
+    margin: auto;
+}
+.hero-right > img {
+    object-fit: contain;
+    width: 90%;
+}
